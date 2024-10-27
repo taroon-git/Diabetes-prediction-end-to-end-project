@@ -1,1 +1,62 @@
-<h1>Person is: {{result}}</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result - Tarun's World</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+    }
+
+    .result-container {
+      text-align: center;
+      padding: 2em;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      color: #333;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #4a8ed4;
+      margin-bottom: 0.5em;
+    }
+
+    .prediction-result {
+      font-size: 1.5em;
+      color: #555;
+    }
+    
+    .back-button {
+      display: inline-block;
+      margin-top: 1.5em;
+      padding: 0.8em 1.5em;
+      font-size: 1em;
+      color: white;
+      background-color: #5d9cec;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    
+    .back-button:hover {
+      background-color: #4a8ed4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="result-container">
+    <h1>Prediction Result</h1>
+    <p class="prediction-result">Person is: <strong>{{ result }}</strong></p>
+    <a href="{{ url_for('index') }}" class="back-button">Back to Home</a>
+  </div>
+</body>
+</html>
